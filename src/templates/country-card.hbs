@@ -1,0 +1,14 @@
+  <div class='country-card__body'>
+    <h2 class='country-card__name' >{{name.common}}</h2>
+    <img class='country-card__image' src={{flags.svg}} alt={{name.common}} width="400px"/>
+    <p class='country-card__capital'>Capital: {{capital}}</p>
+    <p class='country-card__population'>Population: {{population}}</p>
+    <p class='country-card__languages-group'>
+        <p>Languages:</p>
+        <ul class='country-card__languages'>
+          {{#each languages}}
+          <li class='country-card__language'>{{this}}</li>
+          {{/each}}
+    </p>
+    </ul>
+  </div>
