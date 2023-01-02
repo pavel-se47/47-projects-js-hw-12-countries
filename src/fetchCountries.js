@@ -4,10 +4,12 @@ import {
   renderAlert,
   renderCountryList,
   renderCountryCard,
-} from './renderCard';
+} from './renderCard.js';
 
 export default function fetchCountries(searchQuery) {
-  fetch(`https://restcountries.com/v3.1/name/${searchQuery}`)
+  const searchQueryTrim = searchQuery.trim();
+  const filter = '?fields=name,capital,population,flags,languages';
+  fetch(`https://restcountries.com/v3.1/name/${searchQueryTrim}${filter}`)
     .then(response => {
       return response.json();
     })

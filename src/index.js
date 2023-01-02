@@ -8,6 +8,6 @@ function onSearch(event) {
   fetchCountries(`${event.target.value}`);
 }
 
-const debouncedOnSearch = _.debounce(onSearch, 500);
+const debouncedOnSearch = _.debounce(onSearch, 300);
 
 inputEl.addEventListener('input', debouncedOnSearch);

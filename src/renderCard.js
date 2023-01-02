@@ -40,7 +40,7 @@ export function renderAlert() {
 }
 
 export function renderCountryCard(arr) {
-  countryCardEl.innerHTML = '';
+  // countryCardEl.innerHTML = '';
   arr.map(country => {
     const markup = countryCardTpl(country);
     countryCardEl.innerHTML = markup;
